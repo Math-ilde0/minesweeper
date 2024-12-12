@@ -1,0 +1,13 @@
+#!/bin/bash
+set -e
+
+echo "Checking out the latest version..."
+export GIT_DIR=/home/mjd/minesweeper/repositories/minesweeper.git
+export GIT_WORK_TREE=/home/mjd/minesweeper
+git checkout -f main
+cd "$GIT_WORK_TREE"
+
+echo "Running mix release..."
+MIX_ENV=prod mix release
+
+echo "Deployment successful!"
