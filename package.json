@@ -7,6 +7,7 @@
     "build": "npm run build --workspace assets",
     "build:dev": "npm run build --workspace assets",
     "watch": "npm run watch --workspace assets"
+"deploy": "npm run build && mix phx.digest"
   },
   "engines": {
     "node": ">= 18.0.0 < 23.0.0"
